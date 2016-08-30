@@ -2,6 +2,7 @@ require "minitest/autorun"
 require_relative "addition.rb"
 require_relative "subraction.rb"
 require_relative "multiply.rb"
+require_relative "divide.rb"
 class  Testaddition < Minitest::Test 
 	def test_1_equals_1
 		assert_equal(1, 1)
@@ -58,6 +59,24 @@ class Testmultiply < Minitest::Test
 
 	def test_5_times_10
 		assert_equal(50, multiply(5, 10))
+	end
+
+end
+class Testdivide < Minitest::Test
+	def test_1_equals_1
+		assert_equal(1, 1)
+	end
+
+	def test_1_divide_1
+		assert_equal(1, divide(1, 1))
+	end
+
+	def test_2_divide_1
+		assert_equal(3, divide(6, 2))
+	end
+
+	def test_5_divide_10
+		assert_equal(5, divide(50, 10))
 	end
 
 end
