@@ -79,4 +79,8 @@ class Testdivide < Minitest::Test
 		assert_equal(5, divide(50, 10))
 	end
 
+	def test_100_divide_0
+		assert_equal("Infinity", divide(100,0))
+	end
+
 end
